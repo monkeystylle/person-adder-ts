@@ -26,9 +26,13 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Title>People Invited to my Party</Title>
-      <List people={people} />
-      <AddToList people={people} setPeople={setPeople} />
+      <MinMaxWrapper>
+        <Title>People Invited to my Party</Title>
+
+        <List people={people} />
+
+        <AddToList people={people} setPeople={setPeople} />
+      </MinMaxWrapper>
     </>
   );
 };
@@ -37,6 +41,13 @@ const Title = styled.h1`
   font-size: 2rem;
   color: ${({ theme }) => theme.colors.black};
   text-align: center;
+  margin: 32px 0;
+`;
+
+const MinMaxWrapper = styled.div`
+  max-width: 1200px;
+  margin: auto;
+  width: 90%;
 `;
 
 export default Home;

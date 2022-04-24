@@ -28,14 +28,14 @@ const List: React.FC<IProps> = ({ people }) => {
     });
   };
 
-  return <ul>{RenderList()}</ul>;
+  return <CardWrapper>{RenderList()}</CardWrapper>;
 };
 
 const CardList = styled.li`
-  border: 1px solid black;
+  border: 1px solid silver;
   padding: 8px;
-  width: fit-content;
   border-radius: 8px;
+  background-color: gainsboro;
 `;
 
 const AvatarWrapper = styled.div`
@@ -52,6 +52,12 @@ const AvatarImage = styled.img`
   /* Take full size */
   height: 100%;
   width: 100%;
+`;
+
+const CardWrapper = styled.ul`
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 `;
 
 export default List;
