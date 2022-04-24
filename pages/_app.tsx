@@ -5,6 +5,7 @@ import GlobalStyles from '../styles/GlobalStyles';
 const theme = {
   colors: {
     primary: '#0070f3',
+    black: 'black',
   },
 };
 
